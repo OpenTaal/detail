@@ -30,7 +30,7 @@ def get_connection():
             print("ERROR: Other error %s" % err)
     else:
         print("ERROR: more serious error")
-        connection.close()
+#FIXME        connection.close()
 
     return connection
 
