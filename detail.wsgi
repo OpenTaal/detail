@@ -29,6 +29,7 @@ def get_connection():
         else:
             print("ERROR: Other error %s" % err)
     else:
+        print("ERROR: more serious error")
         connection.close()
 
     return connection
@@ -103,15 +104,15 @@ def detail_app(environ, start_response):
         version_1_10 = ''
         version_1_00 = ''
         ntg1996 = ''
-        egb = ''
+        egb = 0
         base_word = ''
         alternatief = ''
         woordtype = ''
-        exclude_spell_checker = ''
-        temporal_qualifier = ''
+        exclude_spell_checker = 0
+        temporal_qualifier = 0
         found = False
 
-        for (a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12) in cursor:
+        for (a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12) in cursor:
             next_version = a1
             version_2_10 = a2
             version_2_00 = a3
